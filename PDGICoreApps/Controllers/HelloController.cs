@@ -41,6 +41,8 @@ namespace PDGICoreApps.Controllers
         public IActionResult LuasSegitiga(double alas,double tinggi)
         {
             double hasil = 0.5 * alas * tinggi;
+            ViewData["alas"] = alas;
+            ViewData["tinggi"] = tinggi;
             ViewData["hasil"] = hasil;
 
             return View();

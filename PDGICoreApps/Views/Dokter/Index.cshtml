@@ -1,0 +1,70 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form Tambah Dokter</title>
+
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Form Tambah Dokter</h2>
+            
+            <div class="col-md-4 pre-scrollable" style="max-height:75vh">
+                <form method="post" asp-controller="Dokter" asp-action="Index">
+                    <div class="form-group">
+                        <label for="UserID">User ID :</label>
+                        <input type="text" name="UserID" placeholder="insert user id" id="UserID"
+                               class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="NIP">NIP :</label>
+                        <input type="text" name="NIP" placeholder="insert nip" id="NIP"
+                               class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Nama">Nama :</label>
+                        <input type="text" name="Nama" placeholder="insert nama" id="Nama"
+                               class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Alamat">Alamat :</label>
+                        <input type="text" name="Alamat" placeholder="insert alamat" id="Alamat"
+                               class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Telpon">Telpon :</label>
+                        <input type="text" name="Telpon" placeholder="insert telpon" id="Telpon"
+                               class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="TanggalLahir">Tanggal Lahir :</label>
+                        <input type="date" name="TanggalLahir" id="TanggalLahir"
+                               class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="NoSIP">No SIP :</label>
+                        <input type="text" name="NoSIP" id="NoSIP" class="form-control"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
