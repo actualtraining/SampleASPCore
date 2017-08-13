@@ -1,0 +1,40 @@
+
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Contact</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    @{ string[] arrLang = (string[])ViewData["language"]; }
+    <div class="container">
+        <div class="row">
+            <h2>Halaman Contact</h2>
+
+            <p>Selamat datang @ViewData["firstname"] @ViewData["lastname"]</p>
+            <p>Gender anda : @ViewData["gender"]</p>
+            <p>Language :</p>
+            <ul>
+                @foreach (var lang in arrLang)
+                {
+                    <li>@lang</li>
+                }
+            </ul>
+            <p>Your Country is: <strong>@ViewData["country"]</strong></p>
+            <p>Summary : @ViewData["summary"]</p>
+            <p>Birthdate : @ViewData["birthdate"]</p>
+            <p>Quality : @ViewData["quality"]</p>
+        </div>
+    </div>
+</body>
+</html>
