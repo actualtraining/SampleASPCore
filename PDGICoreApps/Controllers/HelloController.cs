@@ -31,5 +31,19 @@ namespace PDGICoreApps.Controllers
 
             return View();
         }
+
+        public IActionResult LuasSegitiga()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult LuasSegitiga(double alas,double tinggi)
+        {
+            double hasil = 0.5 * alas * tinggi;
+            ViewData["hasil"] = hasil;
+
+            return View();
+        }
     }
 }
